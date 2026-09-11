@@ -1068,3 +1068,213 @@ body {
   .footer-grid { grid-template-columns: 1fr; }
   .back-to-top { right: 24px; bottom: 90px; }
 }
+/* ===================== OUR BRANCHES - EXPLORE GRID (Home page) ===================== */
+.branch-explore-section {
+  text-align: center;
+  padding: 50px 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.branch-explore-section h2 {
+  font-size: 30px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 6px;
+}
+.branch-explore-section .sub {
+  color: #666;
+  font-size: 14.5px;
+  margin-bottom: 34px;
+}
+.branch-explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.branch-explore-card {
+  background: #fff;
+  border: 1px solid #f0e0e0;
+  border-radius: 18px;
+  padding: 26px 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.branch-explore-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(185, 28, 28, 0.15);
+  border-color: #fecaca;
+}
+.branch-explore-icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 14px;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 16px rgba(185, 28, 28, 0.18);
+}
+.branch-explore-card b {
+  font-size: 15px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+.branch-explore-card span {
+  font-size: 11.5px;
+  color: #b91c1c;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .branch-explore-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .branch-explore-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .branch-explore-icon { width: 60px; height: 60px; font-size: 24px; }
+}
+
+/* ===================== BRANCH DETAIL PAGE (full page on click) ===================== */
+.branch-detail-page {
+  padding-bottom: 70px;
+}
+.branch-detail-hero {
+  text-align: center;
+  padding: 55px 20px 45px;
+  background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 55%, #991b1b 100%);
+  color: #fff;
+  position: relative;
+}
+.branch-detail-hero .badge-pill {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.branch-detail-hero h1 {
+  font-size: 34px;
+  font-weight: 900;
+  margin: 10px 0 6px;
+}
+.branch-detail-hero p {
+  color: #fde2e2;
+  font-size: 14.5px;
+}
+.branch-back-btn {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.branch-back-btn:hover { background: rgba(255, 255, 255, 0.28); }
+
+.branch-detail-body {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+  align-items: start;
+}
+.branch-detail-main { display: flex; flex-direction: column; gap: 22px; }
+.branch-detail-card {
+  background: #fff;
+  border: 1px solid #f5dede;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 10px 26px rgba(185, 28, 28, 0.06);
+}
+.branch-detail-card h3 {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #7f1d1d;
+  margin-bottom: 10px;
+}
+.branch-detail-card p {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.branch-map-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #b91c1c;
+  font-weight: 700;
+  font-size: 13.5px;
+  text-decoration: none;
+}
+.branch-map-link:hover { text-decoration: underline; }
+
+.branch-services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.branch-services-grid span {
+  background: #fff5f5;
+  color: #7f1d1d;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.branch-detail-side { position: sticky; top: 90px; }
+.branch-contact-card {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  border-radius: 18px;
+  padding: 28px;
+  color: #fff;
+}
+.branch-contact-card h3 { font-size: 16px; font-weight: 800; margin-bottom: 18px; }
+.bc-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+.bc-row a { color: #fecaca; text-decoration: none; }
+.bc-row a:hover { text-decoration: underline; }
+.branch-quote-btn {
+  width: 100%;
+  margin-top: 10px;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 14.5px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.branch-quote-btn:hover { background: #b91c1c; transform: translateY(-2px); }
+
+@media (max-width: 900px) {
+  .branch-detail-body { grid-template-columns: 1fr; }
+  .branch-detail-side { position: static; }
+  .branch-back-btn { position: static; display: inline-block; margin-bottom: 14px; }
+}
+.branch-explore-card:hover, .branch-click-card:hover {
+  background: #b91c1c !important;
+  color: #fff !important;
+  border-color: #b91c1c !important;
+  transform: translateY(-3px);
+}
+.branch-explore-card:active, .branch-click-card:active {
+  background: #7f1d1d !important;
+}
