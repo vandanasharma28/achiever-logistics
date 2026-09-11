@@ -99,7 +99,7 @@ const branches = [
   {
     city: 'Faridabad', tag: 'Registered Office', type: 'REGISTERED OFFICE - LEGAL ENTITY',
     addr: REGISTERED_OFFICE_ADDR, lat: 28.3670, lng: 77.3150, icon: '🏭',
-    phone: '+91 9112020109', email: 'faridabadDineshsharma.alcpl@gmail.Com',
+    phone: '+91 9112020105', email: 'Dineshsharma.alcpl@gmail.Com',
     short: 'Legal & Billing Office', coverage: 'Haryana, Punjab, Rajasthan, Delhi NCR',
     desc: 'Faridabad is our Registered Office handling legal compliance, GST billing and Haryana industrial belt operations.',
     long1: 'Faridabad branch in Sector-24 is the backbone for Haryana industrial belt - Ballabgarh, Sector 58-59, Palwal. Expert in steel coil, sheet metal and heavy engineering transport with specialized coil trailers and low-bed trailers for JCB, Escorts and other OEMs. 10+ years in Faridabad region.',
@@ -110,7 +110,7 @@ const branches = [
   {
     city: 'Greater Noida', tag: 'Head Office - Operations', type: 'HEAD OFFICE - OPERATIONS HUB',
     addr: 'Khasra No. 210, Jal Vayu Vihar, Ecotech-3, Greater Noida West, UP - 201306', lat: 28.4744, lng: 77.5040, icon: '🏗️',
-    phone: '+91 9112020110', email: 'greaternoidaDineshsharma.alcpl@gmail.Com',
+    phone: '+91 9112020105', email: 'Dineshsharma.alcpl@gmail.Com',
     short: 'Ecotech-III Main Hub', coverage: 'UP, Delhi NCR, Bihar, Bengal, East India',
     desc: 'Greater Noida Ecotech-3 is our main operational hub controlling fleet, drivers and Pan India dispatches.',
     long1: 'Greater Noida is our largest hub with 15+ owned trucks and 50+ attached vehicles. Located in Ecotech-3, it serves Surajpur, Ecotech, Kasna and Dadri industrial areas. Special expertise in factory relocation with 100 Ton hydraulic crane, forklift team and skilled labor for complete plant shifting.',
@@ -121,7 +121,7 @@ const branches = [
   {
     city: 'Pune', tag: 'Maharashtra Hub', type: 'WESTERN INDIA HUB - CHAKAN MIDC',
     addr: 'Gat No. 123, Chakan MIDC, Pune-Nashik Highway, Pune, MH - 410501', lat: 18.7600, lng: 73.8500, icon: '🚚',
-    phone: '+91 9112020111', email: 'puneDineshsharma.alcpl@gmail.Com',
+    phone: '+91 9112020105', email: 'Dineshsharma.alcpl@gmail.Com',
     short: 'Chakan MIDC Hub', coverage: 'Maharashtra, Goa, Karnataka, Kerala',
     desc: 'Pune Chakan MIDC branch is our Western India gateway for auto and engineering industries.',
     long1: 'Pune Chakan branch handles daily loads from Chakan, Talegaon, Ranjangaon and Pimpri Chinchwad. Expert in automobile JIT delivery for Tata, Mahindra, Bajaj with returnable packaging management, time-slot delivery and air suspension trucks for fragile parts.',
@@ -132,7 +132,7 @@ const branches = [
   {
     city: 'Ahmedabad', tag: 'Gujarat Hub', type: 'GUJARAT MAIN HUB - ASLALI',
     addr: 'Plot 89, Aslali, Ahmedabad-Bavla Highway, Ahmedabad, GJ - 382427', lat: 23.0100, lng: 72.5500, icon: '🦁',
-    phone: '+91 9112020112', email: 'ahmedabadDineshsharma.alcpl@gmail.Com',
+    phone: '+91 9112020105', email: 'Dineshsharma.alcpl@gmail.Com',
     short: 'Aslali Industrial Hub', coverage: 'Gujarat, Rajasthan, MP, Maharashtra',
     desc: 'Ahmedabad Aslali branch is Gujarat main hub for ceramic, chemicals and textile transport.',
     long1: 'Ahmedabad branch at Aslali serves Sanand, Changodar, Bavla, Odhav GIDC. Expert in ceramic tiles transport with wooden box packaging and shock-proof loading to prevent breakage. Daily high-deck trucks for volume goods to North India with 48 hours delivery guarantee to Delhi NCR.',
@@ -143,7 +143,7 @@ const branches = [
   {
     city: 'Vapi', tag: 'Chemical Hub', type: 'CHEMICAL HUB - HAZMAT LICENSED',
     addr: 'Plot 12, GIDC, Near Gunjan, Vapi, GJ - 396195', lat: 20.3700, lng: 72.9000, icon: '🧪',
-    phone: '+91 9112020113', email: 'vapiDineshsharma.alcpl@gmail.Com',
+    phone: '+91 9112020105', email: 'Dineshsharma.alcpl@gmail.Com',
     short: 'GIDC Chemical Hub', coverage: 'South Gujarat, Maharashtra, Daman, Silvassa',
     desc: 'Vapi GIDC branch is chemical capital of India handling hazardous chemical transport with license.',
     long1: 'Vapi branch is specialized for chemical transport in Vapi, Daman, Silvassa and Umargam GIDC. Licensed for hazardous chemical with PESO approval, trained drivers and safety equipment. Daily chemical approved tankers to Delhi NCR, Punjab, Baddi with emergency response team.',
@@ -154,7 +154,7 @@ const branches = [
   {
     city: 'Neemrana', tag: 'Rajasthan Hub', type: 'RAJASTHAN HUB - JAPANESE ZONE',
     addr: 'RIICO Industrial Area, Near Japanese Zone, Neemrana, RJ - 301705', lat: 28.0500, lng: 76.3800, icon: '🏜️',
-    phone: '+91 9112020114', email: 'neemranaDineshsharma.alcpl@gmail.Com',
+    phone: '+91 9112020105', email: 'Dineshsharma.alcpl@gmail.Com',
     short: 'Japanese Zone Hub', coverage: 'Rajasthan, Haryana, Gujarat, MP',
     desc: 'Neemrana Japanese Zone branch serves Japanese companies with air suspension trucks and 5S methodology.',
     long1: 'Neemrana branch serves Japanese Zone in Neemrana, Behror, Khushkhera, Bhiwadi. Expert for Japanese OEMs like Daikin, Nissin, Toyoda with high value electronics and auto parts transport using air suspension trucks to prevent vibration damage. Follows Japanese 5S methodology.',
@@ -165,7 +165,7 @@ const branches = [
   {
     city: 'Zirakpur', tag: 'Punjab Gateway', type: 'NORTH GATEWAY - REEFER VAN',
     addr: 'NH-5, Chandigarh-Ambala Road, Zirakpur, PB - 140603', lat: 30.6400, lng: 76.8200, icon: '🏔️',
-    phone: '+91 9112020115', email: 'zirakpurDineshsharma.alcpl@gmail.Com',
+    phone: '+91 9112020105', email: 'Dineshsharma.alcpl@gmail.Com',
     short: 'Punjab Gateway Hub', coverage: 'Punjab, Himachal, J&K, Haryana, Baddi',
     desc: 'Zirakpur is North India gateway for pharma, apple and perishable transport with reefer vans.',
     long1: 'Zirakpur branch covers Derabassi, Lalru, Baddi, Mohali and Chandigarh. Special refrigerated service for apple from Shimla, Kinnaur and Kashmir during season with -18 to +5 degree controlled vans. Also expert in pharma transport from Baddi pharma hub to Pan India with temperature logger.',
