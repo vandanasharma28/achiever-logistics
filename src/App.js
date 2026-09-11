@@ -338,7 +338,12 @@ const branches = [
       <div style={{background:'#fff', border:'2px solid #fecaca', borderRadius:'16px', padding:'22px', transition:'all 0.3s'}} onMouseEnter={e=>{e.currentTarget.style.background='#b91c1c'; e.currentTarget.style.color='#fff'}} onMouseLeave={e=>{e.currentTarget.style.background='#fff'; e.currentTarget.style.color='#111827'}}>
         <div style={{fontSize:'10px', fontWeight:'900', letterSpacing:'1px', background:'#fef2f2', color:'#b91c1c', display:'inline-block', padding:'4px 10px', borderRadius:'20px', marginBottom:'10px'}}>CONTACT</div>
         <h3 style={{fontSize:'15px', fontWeight:'900', marginBottom:'12px'}}>Contact {branchView.city}</h3>
-        <p style={{fontSize:'13px', lineHeight:'2.2'}}>📞 {branchView.phone}<br/>✉️ {branchView.email}<br/>💬 WhatsApp Support<br/><span style={{fontSize:'11px', opacity:'0.8'}}>9 AM to 8 PM - All Days</span></p>
+       <div style={{fontSize:'13px', lineHeight:'2.2'}}>
+  <a href={`tel:${branchView.phone}`} style={{textDecoration:'none', color:'inherit', cursor:'pointer', display:'block'}}>📞 {branchView.phone}</a>
+  <a href={`mailto:${branchView.email}`} style={{textDecoration:'none', color:'inherit', cursor:'pointer', display:'block'}}>✉️ {branchView.email}</a>
+  <a href={`https://wa.me/${branchView.phone.replace(/\D/g,'')}?text=Hello%20Achiever%20Logistics`} target="_blank" rel="noopener noreferrer" style={{textDecoration:'none', color:'inherit', cursor:'pointer', display:'block'}}>💬 WhatsApp Support</a>
+  <span>9 AM to 8 PM - All Days</span>
+</div>
         <button onClick={()=>setShowQuote(true)} style={{marginTop:'14px', width:'100%', background:'#111827', color:'#fff', border:'none', padding:'12px', borderRadius:'10px', fontWeight:'800', cursor:'pointer'}}>Get Free Quote →</button>
       </div>
 
