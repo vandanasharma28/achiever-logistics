@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect, useRef } from 'react';
 import truckImg from './truck.png';
+import TidioChat from "./Tidiochat";
 
 // ⚠️ Change this to your live backend URL once you deploy it.
 const API_BASE = 'http://localhost:8080';
@@ -1131,6 +1132,7 @@ const branches = [
           </div>
         </div>
       )}
+      <TidioChat/>
     </div>
   );
 }
