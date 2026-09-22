@@ -281,6 +281,7 @@ const branches = [
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <span className={active === 'home' && !branchView ? 'on' : ''} onClick={() => goTo('home')}>Home</span>
           <span className={active === 'services' ? 'on' : ''} onClick={() => goTo('services')}>Services</span>
+          <span className={active === 'car-transport' ? 'on' : ''} onClick={() => goTo('car-transport')}>Car Transport</span>
           <span className={active === 'why-us' ? 'on' : ''} onClick={() => goTo('why-us')}>Why Us</span>
           <span className={active === 'industries' ? 'on' : ''} onClick={() => goTo('industries')}>Industries</span>
           <span className={active === 'about' ? 'on' : ''} onClick={() => goTo('about')}>About Us</span>
@@ -780,7 +781,594 @@ const branches = [
               </div>
             </section>
           )}
+          {/* ================= PREMIUM CAR TRANSPORT PAGE ================= */}
+{active === 'car-transport' && (
+  <section className="car-page">
 
+    {/* HERO */}
+    <div className="car-hero">
+      <div className="car-hero-overlay"></div>
+
+      <div className="car-hero-content">
+        <span className="car-eyebrow">PREMIUM VEHICLE TRANSPORT</span>
+
+        <h1>
+          Car Transport
+          <br />
+          <span>All Over India</span>
+        </h1>
+
+        <p className="car-hero-subtitle">
+          Safe, reliable and professional car transportation with
+          careful handling from pickup to final delivery.
+        </p>
+
+        <div className="car-hero-buttons">
+          <button
+            className="car-btn car-btn-primary"
+            onClick={() => setShowQuote(true)}
+          >
+            Get Free Quote →
+          </button>
+
+          <a
+            className="car-btn car-btn-outline"
+            href={`tel:+91${PRIMARY_PHONE}`}
+          >
+            ☎ Call Now
+          </a>
+
+          <a
+            className="car-btn car-btn-whatsapp"
+            href={`https://wa.me/91${PRIMARY_PHONE}?text=${encodeURIComponent(
+              "Hello Achiever Logistics, I need a Car Transport quotation."
+            )}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            WhatsApp Us
+          </a>
+        </div>
+
+        <div className="car-trust-points">
+          <span>✓ Professional Handling</span>
+          <span>✓ Pan India Service</span>
+          <span>✓ Door-to-Door Support</span>
+          <span>✓ Dedicated Assistance</span>
+        </div>
+      </div>
+
+      <div className="car-hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85"
+          alt="Premium car transportation"
+        />
+      </div>
+    </div>
+
+
+    {/* INTRO / STATS */}
+    <section className="car-intro">
+      <div className="car-section-heading">
+        <span>WHY ACHIEVER LOGISTICS</span>
+        <h2>
+          Premium Car Transport,
+          <strong> Done Right.</strong>
+        </h2>
+        <p>
+          Whether you are relocating to another city, purchasing a new
+          vehicle or moving your car for business purposes, Achiever
+          Logistics provides a professional transportation solution
+          designed around the safety of your vehicle.
+        </p>
+      </div>
+
+      <div className="car-stats">
+        <div className="car-stat">
+          <div className="car-stat-icon">🚘</div>
+          <strong>Pan India</strong>
+          <span>Car Transportation</span>
+        </div>
+
+        <div className="car-stat">
+          <div className="car-stat-icon">🛡️</div>
+          <strong>Safe Handling</strong>
+          <span>Careful Vehicle Movement</span>
+        </div>
+
+        <div className="car-stat">
+          <div className="car-stat-icon">📍</div>
+          <strong>Door-to-Door</strong>
+          <span>Pickup & Delivery Support</span>
+        </div>
+
+        <div className="car-stat">
+          <div className="car-stat-icon">📞</div>
+          <strong>Dedicated Support</strong>
+          <span>Booking to Delivery</span>
+        </div>
+      </div>
+    </section>
+
+
+    {/* VEHICLE TYPES */}
+    <section className="car-vehicles">
+      <div className="car-section-heading">
+        <span>VEHICLES WE TRANSPORT</span>
+        <h2>
+          Transport Your Car With
+          <strong> Confidence</strong>
+        </h2>
+        <p>
+          Our vehicle transportation service is suitable for different
+          types of personal and premium cars.
+        </p>
+      </div>
+
+      <div className="vehicle-grid">
+
+        <div className="vehicle-card">
+          <div className="vehicle-image">
+            <img
+              src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=900&q=85"
+              alt="Hatchback car transport"
+            />
+            <span>01</span>
+          </div>
+
+          <div className="vehicle-content">
+            <h3>Hatchback Cars</h3>
+            <p>
+              Professional transportation support for compact and
+              family hatchback vehicles.
+            </p>
+
+            <button onClick={() => setShowQuote(true)}>
+              Transport My Car →
+            </button>
+          </div>
+        </div>
+
+
+        <div className="vehicle-card">
+          <div className="vehicle-image">
+            <img
+              src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=900&q=85"
+              alt="Sedan car transport"
+            />
+            <span>02</span>
+          </div>
+
+          <div className="vehicle-content">
+            <h3>Sedan Cars</h3>
+            <p>
+              Reliable transportation for sedans with careful loading,
+              movement and delivery assistance.
+            </p>
+
+            <button onClick={() => setShowQuote(true)}>
+              Get Sedan Quote →
+            </button>
+          </div>
+        </div>
+
+
+        <div className="vehicle-card">
+          <div className="vehicle-image">
+            <img
+              src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=85"
+              alt="SUV car transport"
+            />
+            <span>03</span>
+          </div>
+
+          <div className="vehicle-content">
+            <h3>SUV & MUV</h3>
+            <p>
+              Suitable transportation assistance for larger SUVs,
+              MUVs and family vehicles.
+            </p>
+
+            <button onClick={() => setShowQuote(true)}>
+              Get SUV Quote →
+            </button>
+          </div>
+        </div>
+
+
+        <div className="vehicle-card">
+          <div className="vehicle-image">
+            <img
+              src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=900&q=85"
+              alt="Luxury car transport"
+            />
+            <span>04</span>
+          </div>
+
+          <div className="vehicle-content">
+            <h3>Premium & Luxury Cars</h3>
+            <p>
+              Extra-care transportation support for premium and
+              high-value vehicles.
+            </p>
+
+            <button onClick={() => setShowQuote(true)}>
+              Request Premium Quote →
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    {/* SAFETY SECTION */}
+    <section className="car-safety">
+
+      <div className="car-safety-image">
+        <img
+          src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85"
+          alt="Professional car transportation"
+        />
+      </div>
+
+      <div className="car-safety-content">
+
+        <span className="car-small-label">
+          VEHICLE SAFETY FIRST
+        </span>
+
+        <h2>
+          Your Car Deserves
+          <br />
+          <strong>Professional Care.</strong>
+        </h2>
+
+        <p>
+          We understand that your car is more than just a vehicle.
+          Our transportation process focuses on careful handling,
+          secure movement and smooth delivery.
+        </p>
+
+        <div className="safety-list">
+
+          <div>
+            <span>✓</span>
+            <div>
+              <strong>Pre-Transport Inspection</strong>
+              <p>Vehicle condition can be checked before movement.</p>
+            </div>
+          </div>
+
+          <div>
+            <span>✓</span>
+            <div>
+              <strong>Professional Loading</strong>
+              <p>Careful loading and secure vehicle positioning.</p>
+            </div>
+          </div>
+
+          <div>
+            <span>✓</span>
+            <div>
+              <strong>Secure Transportation</strong>
+              <p>Focused handling throughout the transportation process.</p>
+            </div>
+          </div>
+
+          <div>
+            <span>✓</span>
+            <div>
+              <strong>Delivery Assistance</strong>
+              <p>Support from pickup coordination to final delivery.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button
+          className="car-dark-btn"
+          onClick={() => setShowQuote(true)}
+        >
+          Book Safe Car Transport →
+        </button>
+
+      </div>
+
+    </section>
+
+
+    {/* PROCESS */}
+    <section className="car-process">
+
+      <div className="car-section-heading">
+        <span>OUR PROCESS</span>
+
+        <h2>
+          Simple & Hassle-Free
+          <strong> Car Transportation</strong>
+        </h2>
+
+        <p>
+          From your first enquiry to final delivery, our team keeps
+          the transportation process simple and organised.
+        </p>
+      </div>
+
+      <div className="process-grid">
+
+        <div className="process-card">
+          <div className="process-number">01</div>
+          <div className="process-icon">📞</div>
+          <h3>Share Your Requirement</h3>
+          <p>
+            Tell us your pickup location, destination and vehicle
+            details.
+          </p>
+        </div>
+
+        <div className="process-line"></div>
+
+        <div className="process-card">
+          <div className="process-number">02</div>
+          <div className="process-icon">📋</div>
+          <h3>Get Your Quote</h3>
+          <p>
+            Our team understands your requirement and provides
+            transportation details.
+          </p>
+        </div>
+
+        <div className="process-line"></div>
+
+        <div className="process-card">
+          <div className="process-number">03</div>
+          <div className="process-icon">🚗</div>
+          <h3>Vehicle Pickup</h3>
+          <p>
+            Pickup is coordinated according to the agreed
+            transportation plan.
+          </p>
+        </div>
+
+        <div className="process-line"></div>
+
+        <div className="process-card">
+          <div className="process-number">04</div>
+          <div className="process-icon">🏁</div>
+          <h3>Safe Delivery</h3>
+          <p>
+            Your vehicle reaches the destination with delivery
+            coordination and support.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    {/* WHY US */}
+    <section className="car-why">
+
+      <div className="car-section-heading">
+        <span>THE ACHIEVER ADVANTAGE</span>
+
+        <h2>
+          Why Customers Choose
+          <strong> Achiever Logistics</strong>
+        </h2>
+      </div>
+
+      <div className="car-why-grid">
+
+        <div className="car-why-card">
+          <span>01</span>
+          <div>🚛</div>
+          <h3>Professional Transportation</h3>
+          <p>
+            Dedicated logistics support for vehicle transportation
+            requirements.
+          </p>
+        </div>
+
+        <div className="car-why-card">
+          <span>02</span>
+          <div>🛡️</div>
+          <h3>Safety Focused</h3>
+          <p>
+            Careful handling and secure movement are central to our
+            transportation process.
+          </p>
+        </div>
+
+        <div className="car-why-card">
+          <span>03</span>
+          <div>🇮🇳</div>
+          <h3>Pan India Network</h3>
+          <p>
+            Car transportation support for major cities and
+            destinations across India.
+          </p>
+        </div>
+
+        <div className="car-why-card">
+          <span>04</span>
+          <div>💬</div>
+          <h3>Easy Communication</h3>
+          <p>
+            Speak directly with our team for booking and
+            transportation assistance.
+          </p>
+        </div>
+
+        <div className="car-why-card">
+          <span>05</span>
+          <div>💰</div>
+          <h3>Transparent Quotes</h3>
+          <p>
+            Clear transportation quotations based on your vehicle
+            and movement requirement.
+          </p>
+        </div>
+
+        <div className="car-why-card">
+          <span>06</span>
+          <div>⏱️</div>
+          <h3>Timely Coordination</h3>
+          <p>
+            Organised pickup and delivery coordination to make your
+            vehicle movement easier.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    {/* FAQ */}
+    <section className="car-faq">
+
+      <div className="car-section-heading">
+        <span>FREQUENTLY ASKED QUESTIONS</span>
+
+        <h2>
+          Car Transport
+          <strong> FAQs</strong>
+        </h2>
+
+        <p>
+          Have questions about transporting your car? Find quick
+          answers below.
+        </p>
+      </div>
+
+      <div className="faq-container">
+
+        <details>
+          <summary>
+            How can I book car transport with Achiever Logistics?
+            <span>+</span>
+          </summary>
+          <p>
+            You can contact our team by phone, WhatsApp or through
+            the Get Free Quote button. Share your pickup,
+            destination and vehicle details and our team will guide
+            you through the booking process.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Do you provide car transportation across India?
+            <span>+</span>
+          </summary>
+          <p>
+            Yes. We provide car transportation assistance for
+            destinations across India, subject to route and service
+            availability.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Which types of cars can be transported?
+            <span>+</span>
+          </summary>
+          <p>
+            Hatchbacks, sedans, SUVs, MUVs and premium vehicles can
+            be handled depending on the transportation requirement
+            and route.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Is door-to-door car transportation available?
+            <span>+</span>
+          </summary>
+          <p>
+            Door-to-door pickup and delivery can be arranged based
+            on the vehicle location, destination and route
+            conditions.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            How is my car handled during transportation?
+            <span>+</span>
+          </summary>
+          <p>
+            The transportation process includes coordinated pickup,
+            vehicle handling, secure movement and delivery
+            assistance.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            How do I get the price for transporting my car?
+            <span>+</span>
+          </summary>
+          <p>
+            Click on Get Free Quote and share your vehicle,
+            pickup and destination details. Our team will provide
+            the applicable quotation.
+          </p>
+        </details>
+
+      </div>
+
+    </section>
+
+
+    {/* FINAL CTA */}
+    <section className="car-final-cta">
+
+      <div className="car-final-content">
+
+        <span>READY TO MOVE YOUR CAR?</span>
+
+        <h2>
+          Let Your Car Travel
+          <strong> With Confidence.</strong>
+        </h2>
+
+        <p>
+          Get in touch with Achiever Logistics for a professional
+          car transportation quotation.
+        </p>
+
+        <div className="car-final-buttons">
+
+          <button
+            onClick={() => setShowQuote(true)}
+          >
+            Get Free Quote →
+          </button>
+
+          <a href={`tel:+91${PRIMARY_PHONE}`}>
+            ☎ {PRIMARY_PHONE}
+          </a>
+
+          <a
+            href={`https://wa.me/91${PRIMARY_PHONE}?text=${encodeURIComponent(
+              "Hello Achiever Logistics, I want to transport my car."
+            )}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            WhatsApp →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+)}
           {/* Why-Us */}
           {active === 'why-us' && (
             <div className="why-us-page">
@@ -1072,6 +1660,7 @@ const branches = [
           <div>
             <h4>Quick Links</h4>
             <span onClick={() => goTo('services')}>Services</span>
+            <span onClick={() => goTo('car-transport')}>Car Transport</span>
             <span onClick={() => goTo('why-us')}>Why-Us</span>
             <span onClick={() => goTo('industries')}>Industries</span>
             <span onClick={() => goTo('about')}>About Us</span>
@@ -1135,5 +1724,4 @@ const branches = [
     </div>
   );
 }
-
 export default App;
