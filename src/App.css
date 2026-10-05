@@ -991,16 +991,759 @@ body {
   border-radius: 10px;
   margin-bottom: 6px;
 }
+/* =========================================================
+   ACHIEVER LOGISTICS
+   PREMIUM FOOTER
+   DARK NAVY + RED
+   ========================================================= */
 
-/* ===================== FOOTER ===================== */
-.site-footer { background: #111827; color: #d1d5db; padding: 50px 40px 20px; margin-top: 20px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 30px; max-width: 1300px; margin: 0 auto; }
-.footer-grid h3 { color: #fff; font-size: 18px; margin-bottom: 12px; }
-.footer-grid h4 { color: #fff; font-size: 14px; margin-bottom: 14px; }
-.footer-grid p { font-size: 13px; line-height: 1.7; margin-bottom: 4px; color: #9ca3af; }
-.footer-grid span { display: block; font-size: 13px; margin-bottom: 10px; cursor: pointer; color: #9ca3af; }
-.footer-grid span:hover { color: #dc2626; }
-.footer-bottom { text-align: center; border-top: 1px solid #374151; margin-top: 30px; padding-top: 18px; font-size: 12.5px; color: #6b7280; }
+.site-footer {
+  width: 100%;
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(220, 38, 38, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #070a10 0%,
+      #0c111c 50%,
+      #070a10 100%
+    );
+
+  color: #fff;
+
+  position: relative;
+  overflow: hidden;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   TOP FOOTER
+   ========================================================= */
+
+.site-footer .footer-grid {
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 70px 6% 55px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.45fr
+    0.8fr
+    1.25fr
+    1fr;
+
+  gap: 55px;
+}
+
+
+/* =========================================================
+   COMPANY
+   ========================================================= */
+
+.footer-logo-text {
+  font-size: 22px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.8px;
+
+  color: #ffffff;
+}
+
+.footer-logo-text span {
+  color: #ef3b3b;
+}
+
+
+.footer-tagline {
+  margin: 16px 0 8px;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+.footer-network-text {
+  max-width: 330px;
+
+  margin: 0 0 18px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+.footer-website {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #ef4444;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+
+.footer-website:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TRUST BADGE
+   ========================================================= */
+
+.footer-trust-badge {
+  margin-top: 28px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 15px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 10px;
+}
+
+
+.footer-trust-badge > span {
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e52b2b;
+
+  color: #fff;
+
+  font-size: 14px;
+
+  font-weight: 900;
+}
+
+
+.footer-trust-badge strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+
+.footer-trust-badge small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   FOOTER HEADINGS
+   ========================================================= */
+
+.site-footer h4 {
+  margin: 2px 0 20px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  position: relative;
+
+  padding-bottom: 11px;
+}
+
+
+.site-footer h4::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 32px;
+  height: 2px;
+
+  background: #ef3b3b;
+
+  border-radius: 5px;
+}
+
+
+/* =========================================================
+   QUICK LINKS
+   ========================================================= */
+
+.footer-column button {
+  display: block;
+
+  width: fit-content;
+
+  padding: 0;
+
+  margin: 0 0 13px;
+
+  border: none;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.footer-column button:hover {
+  color: #ef4444;
+
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.footer-contact p {
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  margin: 0 0 15px;
+}
+
+
+.footer-contact a {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  margin-bottom: 13px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  transition: 0.25s ease;
+}
+
+
+.footer-contact a span {
+  color: #ef4444;
+
+  font-size: 15px;
+
+  flex-shrink: 0;
+}
+
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   BRANCHES
+   ========================================================= */
+
+.footer-branches {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+
+.footer-branches span {
+  padding: 6px 9px;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 6px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 11px;
+
+  transition: 0.25s ease;
+}
+
+
+.footer-branches span:hover {
+  color: #ffffff;
+
+  border-color: rgba(239, 68, 68, 0.45);
+
+  background: rgba(220, 38, 38, 0.08);
+}
+
+
+.registered-office {
+  margin-top: 22px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+.registered-office strong {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================================
+   INDIA NETWORK
+   ========================================================= */
+
+.footer-india-network {
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 62px 6% 65px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  position: relative;
+}
+
+
+/* Heading */
+
+.footer-india-heading {
+  text-align: center;
+
+  max-width: 850px;
+
+  margin: 0 auto 40px;
+}
+
+
+.footer-india-heading > span {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #ef4444;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2.8px;
+
+  text-transform: uppercase;
+}
+
+
+.footer-india-heading h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(28px, 4vw, 44px);
+
+  line-height: 1.15;
+
+  font-weight: 850;
+
+  letter-spacing: -1px;
+}
+
+
+.footer-india-heading h3 strong {
+  color: #ef4444;
+}
+
+
+.footer-india-heading p {
+  max-width: 680px;
+
+  margin: 16px auto 0;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   STATES GRID
+   ========================================================= */
+
+.footer-state-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 11px;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   STATE CARD
+   ========================================================= */
+
+.footer-state-link {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.footer-state-link::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 3px;
+
+  background: #ef3b3b;
+
+  transform: scaleY(0);
+
+  transform-origin: bottom;
+
+  transition: 0.25s ease;
+}
+
+
+.footer-state-link:hover {
+  transform: translateY(-3px);
+
+  background: rgba(220, 38, 38, 0.08);
+
+  border-color: rgba(239, 68, 68, 0.42);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+
+.footer-state-link:hover::before {
+  transform: scaleY(1);
+}
+
+
+/* Number */
+
+.footer-state-number {
+  min-width: 25px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* State name */
+
+.footer-state-name {
+  flex: 1;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  line-height: 1.4;
+
+  transition: 0.25s ease;
+}
+
+
+.footer-state-link:hover .footer-state-name {
+  color: #ffffff;
+}
+
+
+/* Arrow */
+
+.footer-state-arrow {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 14px;
+
+  transition: 0.25s ease;
+}
+
+
+.footer-state-link:hover .footer-state-arrow {
+  background: #ef3b3b;
+
+  color: #ffffff;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 22px 6%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 11px;
+}
+
+
+.footer-bottom-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+  .site-footer .footer-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 45px;
+  }
+
+  .footer-state-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 55px 5%;
+  }
+
+  .footer-state-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .footer-india-network {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 50px 22px;
+  }
+
+  .footer-india-network {
+    padding: 50px 22px;
+  }
+
+  .footer-india-heading h3 {
+    font-size: 30px;
+  }
+
+  .footer-india-heading p {
+    font-size: 12px;
+  }
+
+  .footer-state-grid {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .footer-state-link {
+    min-height: 58px;
+  }
+
+  .footer-state-name {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 20px 22px;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+  }
+
+}
+
+
+@media (max-width: 380px) {
+
+  .footer-india-heading h3 {
+    font-size: 26px;
+  }
+
+  .footer-state-name {
+    font-size: 12px;
+  }
+
+}
 
 /* ===================== FLOATING BUTTONS ===================== */
 .float-whatsapp {
@@ -4580,4 +5323,12 @@ body {
   .location-content-section h2 {
     font-size: 31px;
   }
+}
+/* =========================================
+   ALL STATE PAGE - MOVING FROM HEADING
+   ========================================= */
+
+h1:has(+ p),
+h2:has(+ p) {
+  color: #ffffff !important;
 }

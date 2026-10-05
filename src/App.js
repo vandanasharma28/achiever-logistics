@@ -3,7 +3,36 @@ import { useState, useEffect, useRef } from 'react';
 import truckImg from './truck.png';
 import TidioChat from "./Tidiochat";
 
-
+const INDIA_STATES = [
+  { name: "Andhra Pradesh", slug: "andhra-pradesh" },
+  { name: "Arunachal Pradesh", slug: "arunachal-pradesh" },
+  { name: "Assam", slug: "assam" },
+  { name: "Bihar", slug: "bihar" },
+  { name: "Chhattisgarh", slug: "chhattisgarh" },
+  { name: "Goa", slug: "goa" },
+  { name: "Gujarat", slug: "gujarat" },
+  { name: "Haryana", slug: "haryana" },
+  { name: "Himachal Pradesh", slug: "himachal-pradesh" },
+  { name: "Jharkhand", slug: "jharkhand" },
+  { name: "Karnataka", slug: "karnataka" },
+  { name: "Kerala", slug: "kerala" },
+  { name: "Madhya Pradesh", slug: "madhya-pradesh" },
+  { name: "Maharashtra", slug: "maharashtra" },
+  { name: "Manipur", slug: "manipur" },
+  { name: "Meghalaya", slug: "meghalaya" },
+  { name: "Mizoram", slug: "mizoram" },
+  { name: "Nagaland", slug: "nagaland" },
+  { name: "Odisha", slug: "odisha" },
+  { name: "Punjab", slug: "punjab" },
+  { name: "Rajasthan", slug: "rajasthan" },
+  { name: "Sikkim", slug: "sikkim" },
+  { name: "Tamil Nadu", slug: "tamil-nadu" },
+  { name: "Telangana", slug: "telangana" },
+  { name: "Tripura", slug: "tripura" },
+  { name: "Uttar Pradesh", slug: "uttar-pradesh" },
+  { name: "Uttarakhand", slug: "uttarakhand" },
+  { name: "West Bengal", slug: "west-bengal" }
+];
 // ⚠️ Change this to your live backend URL once you deploy it.
     const API_BASE = 'https://app-XXXX.cleverapps.io';
 // ---------- Real company details (from official visiting card) ----------
@@ -2606,79 +2635,386 @@ const branches = [
         </>
       )}
 
-      {/* FOOTER */}
-      <footer className="site-footer">
-        <div className="footer-grid">
-          <div>
-            <h3>ACHIEVER LOGISTICS</h3>
-            <p>{COMPANY_TAGLINE} • Pan India logistics network.</p>
-            <p>🌐 <a href={`https://${WEBSITE}`} target="_blank" rel="noreferrer">{WEBSITE}</a></p>
-          </div>
-          <div>
-            <h4>Quick Links</h4>
-            <span onClick={() => goTo('services')}>Services</span>
-            <span onClick={() => goTo('car-transport')}>Car Transport</span>
-            <span onClick={() => goTo('why-us')}>Why-Us</span>
-            <span onClick={() => goTo('industries')}>Industries</span>
-            <span onClick={() => goTo('about')}>About Us</span>
-            <span onClick={() => goTo('contact')}>Contact</span>
-          </div>
-          <div>
-            <h4>Admin Office - New Delhi</h4>
-            <p>{ADMIN_OFFICE_ADDR}</p>
-            <p><a href={`tel:+91${PRIMARY_PHONE}`}>📞 +91 {PRIMARY_PHONE}</a></p>
-            <p><a href={`mailto:${PRIMARY_EMAIL}`}>✉ {PRIMARY_EMAIL}</a></p>
-          </div>
-          <div>
-            <h4>Our Branches</h4>
-            <p>Ahmedabad • Greater Noida</p>
-            <p>Neemrana • Vapi • Zirakpur • Pune </p>
-            <p style={{ marginTop: '8px' }}>Registered Office: Faridabad, Haryana</p>
-          </div>
-        </div>
-        <div className="footer-bottom">© 2026 {COMPANY_FULL}. All Rights Reserved.</div>
-      </footer>
+{/* ================= PREMIUM FOOTER ================= */}
+<footer className="site-footer">
 
-      {/* FLOATING WHATSAPP BUTTON */}
+  {/* ================= TOP FOOTER ================= */}
+  <div className="footer-grid">
+
+    {/* ================= COMPANY ================= */}
+    <div className="footer-company">
+
+      <div className="footer-logo-text">
+        ACHIEVER <span>LOGISTICS</span>
+      </div>
+
+      <p className="footer-tagline">
+        {COMPANY_TAGLINE}
+      </p>
+
+      <p className="footer-network-text">
+        Professional packing, moving and transportation services
+        across India.
+      </p>
+
       <a
-        href={`https://wa.me/91${PRIMARY_PHONE}`}
+        href={`https://${WEBSITE}`}
         target="_blank"
         rel="noreferrer"
-        className="float-whatsapp"
-        aria-label="WhatsApp"
+        className="footer-website"
       >
-        💬
+        🌐 {WEBSITE}
       </a>
 
-      {/* BACK TO TOP */}
-      {showBackToTop && (
-        <button
-          className="back-to-top"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          aria-label="Back to top"
-        >
-          ↑
-        </button>
-      )}
+      <div className="footer-trust-badge">
+        <span>✓</span>
 
-      {/* GET A QUOTE MODAL */}
-      {showQuote && (
-        <div className="modal-overlay" onClick={() => setShowQuote(false)}>
-          <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-            <h3>Get a Free Quote</h3>
-            <form onSubmit={sendQuote}>
-              <input name="name" placeholder="Your Name" required />
-              <input name="phone" type="tel" placeholder="Phone Number" required />
-              <input name="email" type="email" placeholder="Email Address" required />
-              <input name="address" placeholder="Pickup / Delivery Address" required />
-              <button type="submit">Submit</button>
-            </form>
-            <button className="modal-close" onClick={() => setShowQuote(false)}>Close</button>
-          </div>
+        <div>
+          <strong>500+ Businesses</strong>
+          <small>Trust Us Pan India</small>
         </div>
-      )}
-         <TidioChat />
+      </div>
+
+    </div>
+
+
+    {/* ================= QUICK LINKS ================= */}
+    <div className="footer-column">
+
+      <h4>Quick Links</h4>
+
+      <button onClick={() => goTo("services")}>
+        Services
+      </button>
+
+      <button onClick={() => goTo("car-transport")}>
+        Car Transport
+      </button>
+
+      <button onClick={() => goTo("why-us")}>
+        Why-Us
+      </button>
+
+      <button onClick={() => goTo("industries")}>
+        Industries
+      </button>
+
+      <button onClick={() => goTo("about")}>
+        About Us
+      </button>
+
+      <button onClick={() => goTo("contact")}>
+        Contact
+      </button>
+
+    </div>
+
+
+    {/* ================= ADMIN OFFICE ================= */}
+    <div className="footer-column footer-contact">
+
+      <h4>Admin Office - New Delhi</h4>
+
+      <p className="footer-address">
+        {ADMIN_OFFICE_ADDR}
+      </p>
+
+      <a href={`tel:+91${PRIMARY_PHONE}`}>
+        <span>☎</span>
+        +91 {PRIMARY_PHONE}
+      </a>
+
+      <a href={`mailto:${PRIMARY_EMAIL}`}>
+        <span>✉</span>
+        {PRIMARY_EMAIL}
+      </a>
+
+    </div>
+
+
+    {/* ================= BRANCHES ================= */}
+    <div className="footer-column">
+
+      <h4>Our Branches</h4>
+
+      <div className="footer-branches">
+
+        <span>Ahmedabad</span>
+        <span>Greater Noida</span>
+        <span>Neemrana</span>
+        <span>Vapi</span>
+        <span>Zirakpur</span>
+        <span>Pune</span>
+
+      </div>
+
+      <p className="registered-office">
+        <strong>Registered Office</strong>
+        <br />
+        Faridabad, Haryana
+      </p>
+
+    </div>
+
+  </div>
+
+
+  {/* ======================================================
+      INDIA STATES / PAN INDIA NETWORK
+  ====================================================== */}
+
+  <div className="footer-india-network">
+
+    {/* ================= NETWORK HEADING ================= */}
+
+    <div className="footer-india-heading">
+
+      <span>OUR PAN INDIA NETWORK</span>
+
+      <h3>
+        Packers & Movers
+        <strong> Across India</strong>
+      </h3>
+
+      <p>
+        Professional packing, moving, relocation and transportation
+        services across major states of India.
+      </p>
+
+    </div>
+
+
+    {/* ================= STATES GRID ================= */}
+
+    <div className="footer-state-grid">
+
+      {[
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chhattisgarh",
+        "Goa",
+        "Gujarat",
+        "Haryana",
+        "Himachal Pradesh",
+        "Jharkhand",
+        "Karnataka",
+        "Kerala",
+        "Madhya Pradesh",
+        "Maharashtra",
+        "Manipur",
+        "Meghalaya",
+        "Mizoram",
+        "Nagaland",
+        "Odisha",
+        "Punjab",
+        "Rajasthan",
+        "Sikkim",
+        "Tamil Nadu",
+        "Telangana",
+        "Tripura",
+        "Uttar Pradesh",
+        "Uttarakhand",
+        "West Bengal"
+      ].map((state, index) => {
+
+        const slug = state
+          .toLowerCase()
+          .replace(/\s+/g, "-");
+
+        return (
+
+          <button
+            key={state}
+            className="footer-state-link"
+
+            onClick={() => {
+
+              /* SELECT STATE */
+              setSelectedArea(state);
+
+              /* OPEN NETWORK PAGE */
+              setActive("network");
+
+              /* UPDATE URL */
+              window.history.pushState(
+                {},
+                "",
+                `/packers-movers-${slug}`
+              );
+
+              /* SCROLL TO TOP */
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              });
+
+            }}
+          >
+
+            <span className="footer-state-number">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+
+            <span className="footer-state-name">
+              Packers Movers {state}
+            </span>
+
+            <span className="footer-state-arrow">
+              →
+            </span>
+
+          </button>
+
+        );
+
+      })}
+
+    </div>
+
+  </div>
+
+
+  {/* ======================================================
+      FOOTER BOTTOM
+  ====================================================== */}
+
+  <div className="footer-bottom">
+
+    <div>
+      © 2026 {COMPANY_FULL}. All Rights Reserved.
+    </div>
+
+    <div className="footer-bottom-links">
+
+      <span>Pan India Logistics</span>
+
+      <span>•</span>
+
+      <span>Packers & Movers</span>
+
+      <span>•</span>
+
+      <span>Transport Services</span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+{/* ================= FLOATING WHATSAPP BUTTON ================= */}
+
+<a
+  href={`https://wa.me/91${PRIMARY_PHONE}`}
+  target="_blank"
+  rel="noreferrer"
+  className="float-whatsapp"
+  aria-label="WhatsApp"
+>
+  💬
+</a>
+
+
+{/* ================= BACK TO TOP ================= */}
+
+{showBackToTop && (
+
+  <button
+    className="back-to-top"
+
+    onClick={() =>
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
+
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+)}
+
+
+{/* ================= GET A QUOTE MODAL ================= */}
+
+{showQuote && (
+
+  <div
+    className="modal-overlay"
+    onClick={() => setShowQuote(false)}
+  >
+
+    <div
+      className="modal-box"
+      onClick={(e) => e.stopPropagation()}
+    >
+
+      <h3>
+        Get a Free Quote
+      </h3>
+
+      <form onSubmit={sendQuote}>
+
+        <input
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+
+        <input
+          name="phone"
+          type="tel"
+          placeholder="Phone Number"
+          required
+        />
+
+        <input
+          name="email"
+          type="email"
+          placeholder="Email Address"
+          required
+        />
+
+        <input
+          name="address"
+          placeholder="Pickup / Delivery Address"
+          required
+        />
+
+        <button type="submit">
+          Submit
+        </button>
+
+      </form>
+
+      <button
+        className="modal-close"
+        onClick={() => setShowQuote(false)}
+      >
+        Close
+      </button>
+
+    </div>
+
+  </div>
+
+)}
+
+
+{/* ================= TIDIO CHAT ================= */}
+
+
+
+      <TidioChat />
+
     </div>
   );
 }
+
+
 export default App;
