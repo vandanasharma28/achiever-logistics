@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import truckImg from './truck.png';
 import TidioChat from "./Tidiochat";
 
+
 // ⚠️ Change this to your live backend URL once you deploy it.
     const API_BASE = 'https://app-XXXX.cleverapps.io';
 // ---------- Real company details (from official visiting card) ----------
@@ -57,6 +58,7 @@ function Counter({ end, suffix = '', duration = 1600 }) {
 
 function App() {
   const [active, setActive] = useState('home');
+  const [selectedArea, setSelectedArea] = useState(null);
   const [showQuote, setShowQuote] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -285,6 +287,7 @@ const branches = [
           <span className={active === 'why-us' ? 'on' : ''} onClick={() => goTo('why-us')}>Why Us</span>
           <span className={active === 'industries' ? 'on' : ''} onClick={() => goTo('industries')}>Industries</span>
           <span className={active === 'about' ? 'on' : ''} onClick={() => goTo('about')}>About Us</span>
+          <span className={active === 'network' ? 'on' : ''} onClick={() => goTo('network')}>Our Network</span>
           <span className={active === 'contact' ? 'on' : ''} onClick={() => goTo('contact')}>Contact</span>
           <button className="quote-btn" onClick={() => setShowQuote(true)}>Get a Quote</button>
         </nav>
@@ -1554,6 +1557,960 @@ const branches = [
             </div>
           )}
 
+{/* ================= OUR NETWORK ================= */}
+{active === "network" && (
+  <section className="premium-network">
+
+    {/* =====================================================
+        LOCATION LIST PAGE
+    ===================================================== */}
+    {!selectedArea ? (
+      <>
+        {/* ================= NETWORK HERO ================= */}
+        <section
+          className="network-premium-hero"
+          style={{
+            backgroundImage:
+              "linear-gradient(90deg, rgba(4,4,4,0.97) 0%, rgba(8,8,8,0.91) 38%, rgba(8,8,8,0.65) 65%, rgba(120,0,0,0.55) 100%), url('/truck.png')"
+          }}
+        >
+          <div className="network-hero-overlay">
+            <div className="network-hero-inner">
+
+              <span className="network-kicker">
+                ACHIEVER LOGISTICS • OUR NETWORK
+              </span>
+
+              <h1>
+                Our Network
+                <span> Across Maharashtra</span>
+              </h1>
+
+              <p>
+                Reliable packing, moving, cargo and transportation
+                solutions across Pune, Pimpri-Chinchwad and major
+                cities of Maharashtra.
+              </p>
+
+              <div className="network-hero-points">
+
+                <div>
+                  <strong>50+</strong>
+                  <span>Fleet Vehicles</span>
+                </div>
+
+                <div>
+  <strong>20+</strong>
+  <span>Years Experience</span>
+</div>
+
+                <div>
+                  <strong>Pan India</strong>
+                  <span>Service Network</span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        {/* =================================================
+            LOCATION SECTION
+        ================================================= */}
+        <section className="network-location-section">
+
+          <div className="network-section-heading">
+
+            <div>
+              <span>FIND YOUR LOCATION</span>
+
+              <h2>
+                Packers & Movers
+                <strong> Near You</strong>
+              </h2>
+            </div>
+
+            <p>
+              Select your city or locality to explore our packing,
+              moving, transportation and logistics services.
+            </p>
+
+          </div>
+
+
+          {/* ================= LOCATION GRID ================= */}
+          <div className="network-location-grid">
+
+            {[
+              "Pune",
+              "Pimpri-Chinchwad",
+              "Hinjawadi",
+              "Wakad",
+              "Baner",
+              "Balewadi",
+              "Aundh",
+              "Bavdhan",
+              "Kharadi",
+              "Hadapsar",
+              "Viman Nagar",
+              "Kondhwa",
+              "Katraj",
+              "Kothrud",
+              "Warje",
+              "Pashan",
+              "Chakan",
+              "Talegaon",
+              "Ravet",
+              "Tathawade",
+              "Punawale",
+              "Thergaon",
+              "Bhosari",
+              "Moshi",
+              "Akurdi",
+              "Nigdi",
+              "Chinchwad",
+              "Pimple Saudagar",
+              "Pimple Nilakh",
+              "Pimple Gurav",
+              "Dapodi",
+              "Kasarwadi",
+              "Nanded City",
+              "Dhanori",
+              "Lohegaon",
+              "Wagholi",
+              "Mundhwa",
+              "Magarpatta",
+              "Yerawada",
+              "Mumbai",
+              "Navi Mumbai",
+              "Thane",
+              "Nashik",
+              "Nagpur",
+              "Kolhapur",
+              "Satara",
+              "Solapur",
+              "Sangli",
+              "Ahmednagar",
+              "Jalgaon",
+              "Vasai-Virar",
+              "Panvel",
+              "Ratnagiri"
+            ].map((area, index) => (
+
+              <button
+                type="button"
+                className="premium-location-card"
+                key={area}
+                onClick={() => {
+
+                  setSelectedArea(area);
+
+                  window.history.pushState(
+                    { area },
+                    "",
+                    `#network-${area
+                      .toLowerCase()
+                      .replace(/[^a-z0-9]+/g, "-")}`
+                  );
+
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                  });
+
+                }}
+              >
+
+                <span className="location-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <span className="location-card-content">
+
+                  <small>
+                    PACKERS & MOVERS
+                  </small>
+
+                  <strong>
+                    {area}
+                  </strong>
+
+                  <em>
+                    Logistics • Transportation
+                  </em>
+
+                </span>
+
+                <span className="location-card-arrow">
+                  →
+                </span>
+
+              </button>
+
+            ))}
+
+          </div>
+
+        </section>
+      </>
+    ) : (
+
+      /* =====================================================
+         LOCATION DETAIL PAGE
+      ===================================================== */
+
+      <section className="premium-location-detail">
+
+
+        {/* =================================================
+            LOCATION HERO WITH TRUCK IMAGE
+        ================================================= */}
+
+        <div
+          className="location-detail-premium-hero"
+          style={{
+            backgroundImage:
+              "linear-gradient(90deg, rgba(4,4,4,0.98) 0%, rgba(8,8,8,0.93) 35%, rgba(8,8,8,0.68) 65%, rgba(125,0,0,0.55) 100%), url('/truck.png')"
+          }}
+        >
+
+          <div className="location-detail-hero-inner">
+
+            {/* BACK BUTTON */}
+
+            <button
+              type="button"
+              className="premium-back-button"
+              onClick={() => {
+
+                setSelectedArea("");
+
+                window.history.pushState(
+                  null,
+                  "",
+                  "#network"
+                );
+
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth"
+                });
+
+              }}
+            >
+              ← Back to Maharashtra Network
+            </button>
+
+
+            <span className="detail-kicker">
+              ACHIEVER LOGISTICS • {selectedArea.toUpperCase()}
+            </span>
+
+
+            <h1>
+              Packers and Movers
+              <span> in {selectedArea}</span>
+            </h1>
+
+
+            <p>
+              Professional packing, moving, relocation and
+              transportation solutions for homes, offices,
+              businesses and commercial shipments in {selectedArea}.
+            </p>
+
+
+            <div className="detail-hero-buttons">
+
+              <button
+                type="button"
+                className="premium-red-button"
+                onClick={() => {
+
+                  setShowQuote(true);
+
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                  });
+
+                }}
+              >
+                Get a Free Quote →
+              </button>
+
+
+              <a
+                href="tel:+919112020105"
+                className="premium-outline-button"
+              >
+                Call +91 9112020105
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* =================================================
+            MAIN CONTENT
+        ================================================= */}
+
+        <div className="location-main-wrapper">
+
+
+          {/* =================================================
+              LEFT CONTENT
+          ================================================= */}
+
+          <main className="location-main-content">
+
+            <span className="content-label">
+              PACKERS & MOVERS IN {selectedArea.toUpperCase()}
+            </span>
+
+
+            <h2>
+              Reliable Moving & Logistics
+              <span> Services in {selectedArea}</span>
+            </h2>
+
+
+            <p className="large-location-text">
+              Looking for reliable packers and movers in {selectedArea}?
+              Achiever Logistics Cargo Private Limited provides
+              professional packing, moving, relocation and transportation
+              support for residential, office and commercial requirements.
+            </p>
+
+
+            <p>
+              We understand that every move is different. Whether you are
+              shifting your home, relocating an office, transporting a car
+              or bike, or moving commercial goods, our team helps you plan
+              transportation according to your pickup location,
+              destination, shipment size and handling requirements.
+            </p>
+
+
+            <p>
+              Our logistics solutions are designed to make the moving
+              process more organized and convenient. From packing and
+              loading to transportation and delivery coordination,
+              we can assist with different stages of your move.
+            </p>
+
+
+            {/* ================= HIGHLIGHT BOX ================= */}
+
+            <div className="location-highlight-box">
+
+              <div className="highlight-icon">
+                AL
+              </div>
+
+              <div>
+
+                <strong>
+                  Your Local Logistics Partner
+                </strong>
+
+                <p>
+                  Professional transportation support for customers
+                  moving within {selectedArea}, across Maharashtra
+                  and to other destinations in India.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            {/* =================================================
+                SERVICES
+            ================================================= */}
+
+            <section className="location-content-section">
+
+              <span className="content-label">
+                WHAT WE PROVIDE
+              </span>
+
+              <h2>
+                Our Moving & Transportation
+                <span> Services in {selectedArea}</span>
+              </h2>
+
+
+              <div className="detail-service-list">
+
+
+                <article>
+                  <span>01</span>
+
+                  <div>
+                    <h3>
+                      Household Shifting
+                    </h3>
+
+                    <p>
+                      Professional support for household relocation,
+                      including packing, loading, transportation and
+                      delivery coordination.
+                    </p>
+                  </div>
+                </article>
+
+
+                <article>
+                  <span>02</span>
+
+                  <div>
+                    <h3>
+                      Office Relocation
+                    </h3>
+
+                    <p>
+                      Organized transportation support for office
+                      furniture, equipment, documents and business
+                      belongings.
+                    </p>
+                  </div>
+                </article>
+
+
+                <article>
+                  <span>03</span>
+
+                  <div>
+                    <h3>
+                      Car Transportation
+                    </h3>
+
+                    <p>
+                      Vehicle transportation solutions for customers
+                      shifting their cars between {selectedArea} and
+                      other destinations.
+                    </p>
+                  </div>
+                </article>
+
+
+                <article>
+                  <span>04</span>
+
+                  <div>
+                    <h3>
+                      Bike Transportation
+                    </h3>
+
+                    <p>
+                      Safe transportation arrangements for motorcycles
+                      and two-wheelers based on route and availability.
+                    </p>
+                  </div>
+                </article>
+
+
+                <article>
+                  <span>05</span>
+
+                  <div>
+                    <h3>
+                      Full Truck Load
+                    </h3>
+
+                    <p>
+                      Dedicated transportation options for larger
+                      consignments that require an entire vehicle.
+                    </p>
+                  </div>
+                </article>
+
+
+                <article>
+                  <span>06</span>
+
+                  <div>
+                    <h3>
+                      Part Load Transportation
+                    </h3>
+
+                    <p>
+                      Transportation options for shipments that do not
+                      require a full truck, subject to route availability.
+                    </p>
+                  </div>
+                </article>
+
+
+                <article>
+                  <span>07</span>
+
+                  <div>
+                    <h3>
+                      Commercial Cargo
+                    </h3>
+
+                    <p>
+                      Logistics support for commercial goods, business
+                      shipments and suitable industrial cargo requirements.
+                    </p>
+                  </div>
+                </article>
+
+
+                <article>
+                  <span>08</span>
+
+                  <div>
+                    <h3>
+                      Loading & Unloading
+                    </h3>
+
+                    <p>
+                      Handling support for loading and unloading according
+                      to the nature and requirements of your shipment.
+                    </p>
+                  </div>
+                </article>
+
+
+              </div>
+
+            </section>
+
+
+            {/* =================================================
+                WHY US
+            ================================================= */}
+
+            <section className="location-content-section">
+
+              <span className="content-label">
+                WHY ACHIEVER LOGISTICS
+              </span>
+
+              <h2>
+                Why Customers Choose
+                <span> Achiever Logistics</span>
+              </h2>
+
+
+              <div className="why-location-grid">
+
+
+                <div>
+                  <strong>01</strong>
+
+                  <h3>
+                    Experienced Logistics Support
+                  </h3>
+
+                  <p>
+                    Transportation planning based on your shipment,
+                    route and delivery requirements.
+                  </p>
+                </div>
+
+
+                <div>
+                  <strong>02</strong>
+
+                  <h3>
+                    Multiple Transportation Options
+                  </h3>
+
+                  <p>
+                    Household, commercial, vehicle and cargo
+                    transportation solutions under one roof.
+                  </p>
+                </div>
+
+
+                <div>
+                  <strong>03</strong>
+
+                  <h3>
+                    Route-Based Planning
+                  </h3>
+
+                  <p>
+                    We understand that every route and shipment
+                    requirement can be different.
+                  </p>
+                </div>
+
+
+                <div>
+                  <strong>04</strong>
+
+                  <h3>
+                    Customer-Focused Service
+                  </h3>
+
+                  <p>
+                    Our team helps customers understand suitable
+                    transportation options for their move.
+                  </p>
+                </div>
+
+
+              </div>
+
+            </section>
+
+
+            {/* =================================================
+                MOVING PROCESS
+            ================================================= */}
+
+            <section className="location-content-section">
+
+              <span className="content-label">
+                SIMPLE PROCESS
+              </span>
+
+              <h2>
+                How Your Move
+                <span> Works</span>
+              </h2>
+
+
+              <div className="moving-process">
+
+
+                <div>
+                  <b>01</b>
+
+                  <h3>
+                    Share Your Requirement
+                  </h3>
+
+                  <p>
+                    Tell us your pickup location, destination
+                    and type of goods.
+                  </p>
+                </div>
+
+
+                <div>
+                  <b>02</b>
+
+                  <h3>
+                    Discuss Your Move
+                  </h3>
+
+                  <p>
+                    Our team understands your shipment and
+                    transportation requirements.
+                  </p>
+                </div>
+
+
+                <div>
+                  <b>03</b>
+
+                  <h3>
+                    Plan Transportation
+                  </h3>
+
+                  <p>
+                    Suitable transportation and handling options
+                    are discussed according to your requirement.
+                  </p>
+                </div>
+
+
+                <div>
+                  <b>04</b>
+
+                  <h3>
+                    Move Your Goods
+                  </h3>
+
+                  <p>
+                    Your shipment is coordinated for transportation
+                    towards the destination.
+                  </p>
+                </div>
+
+
+              </div>
+
+            </section>
+
+
+            {/* =================================================
+                LOCAL AREA
+            ================================================= */}
+
+            <section className="local-area-copy">
+
+              <span>
+                LOCAL LOGISTICS SUPPORT
+              </span>
+
+              <h2>
+                Moving From {selectedArea}?
+              </h2>
+
+              <p>
+                If you are planning a household shift, office
+                relocation, vehicle transportation or commercial
+                cargo movement from {selectedArea}, Achiever Logistics
+                can help you explore suitable transportation options.
+              </p>
+
+              <p>
+                We serve customers looking for reliable logistics
+                and transportation support from {selectedArea}
+                to different destinations across Maharashtra and
+                India, depending on route and service availability.
+              </p>
+
+
+              <button
+                type="button"
+                onClick={() => {
+
+                  setShowQuote(true);
+
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                  });
+
+                }}
+              >
+                Discuss Your Requirement →
+              </button>
+
+            </section>
+
+          </main>
+
+
+          {/* =================================================
+              RIGHT SIDEBAR
+          ================================================= */}
+
+          <aside className="location-premium-sidebar">
+
+
+            {/* ================= SERVICES ================= */}
+
+            <div className="sidebar-service-box">
+
+              <span className="sidebar-small-title">
+                OUR SERVICES
+              </span>
+
+              <h3>
+                Logistics Solutions
+              </h3>
+
+              <p>
+                Choose a service for your requirement.
+              </p>
+
+
+              <div className="sidebar-service-list">
+
+
+                {[
+                  "Household Shifting",
+                  "Office Relocation",
+                  "Car Transportation",
+                  "Bike Transportation",
+                  "Full Truck Load",
+                  "Part Load Transportation",
+                  "Commercial Cargo",
+                  "Packing & Unpacking",
+                  "Loading & Unloading",
+                  "Warehousing",
+                  "Door-to-Door Transportation"
+                ].map((service, index) => (
+
+                  <button
+                    type="button"
+                    key={service}
+                    onClick={() => {
+
+                      setShowQuote(true);
+
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                      });
+
+                    }}
+                  >
+
+                    <span>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <strong>
+                      {service}
+                    </strong>
+
+                    <em>
+                      →
+                    </em>
+
+                  </button>
+
+                ))}
+
+              </div>
+
+            </div>
+
+
+            {/* ================= CONTACT CARD ================= */}
+
+            <div className="sidebar-contact-card">
+
+              <span>
+                NEED A QUOTE?
+              </span>
+
+              <h3>
+                Planning a move in
+                <strong> {selectedArea}?</strong>
+              </h3>
+
+              <p>
+                Share your moving or transportation requirement
+                with our team.
+              </p>
+
+
+              <button
+                type="button"
+                onClick={() => {
+
+                  setShowQuote(true);
+
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                  });
+
+                }}
+              >
+                Get Free Quote →
+              </button>
+
+
+              <a href="tel:+919112020105">
+                +91 9112020105
+              </a>
+
+            </div>
+
+
+            {/* ================= QUICK FACTS ================= */}
+
+            <div className="sidebar-facts">
+
+              <span>
+                ACHIEVER LOGISTICS
+              </span>
+
+
+              <div>
+                <strong>
+                  2006
+                </strong>
+
+                <small>
+                  Serving Since
+                </small>
+              </div>
+
+
+              <div>
+                <strong>
+                  50+
+                </strong>
+
+                <small>
+                  Fleet Network
+                </small>
+              </div>
+
+
+              <div>
+                <strong>
+                  Pan India
+                </strong>
+
+                <small>
+                  Service Reach
+                </small>
+              </div>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+
+        {/* =================================================
+            BOTTOM CTA
+        ================================================= */}
+
+        <section className="location-bottom-cta">
+
+          <div>
+
+            <span>
+              READY TO MOVE?
+            </span>
+
+            <h2>
+              Let's Plan Your Move
+              <strong> From {selectedArea}</strong>
+            </h2>
+
+            <p>
+              Get in touch with Achiever Logistics for packing,
+              moving and transportation requirements.
+            </p>
+
+          </div>
+
+
+          <button
+            type="button"
+            onClick={() => {
+
+              setShowQuote(true);
+
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              });
+
+            }}
+          >
+            Get a Free Quote →
+          </button>
+
+        </section>
+
+      </section>
+    )}
+
+  </section>
+)}
           {/* CONTACT */}
           {active === 'contact' && (
             <div className="contact-section">
