@@ -56,14 +56,143 @@ function Counter({ end, suffix = '', duration = 1600 }) {
   );
 }
 
+const stateFromSlug = (slug) => {
+  return slug
+    .split("-")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
+const getInitialRoute = () => {
+  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+
+  if (path === "/") return "home";
+  if (path === "/services") return "services";
+  if (path === "/car-transport") return "car-transport";
+  if (path === "/why-choose-us") return "why-us";
+  if (path === "/industries") return "industries";
+  if (path === "/about-us") return "about";
+  if (path === "/contact") return "contact";
+  if (path === "/our-network") return "network";
+
+  if (path.startsWith("/packers-movers-")) {
+    return "network";
+  }
+
+  return "home";
+};
+
+const getInitialArea = () => {
+  const path = window.location.pathname.replace(/\/+$/, "");
+
+  if (path.startsWith("/packers-movers-")) {
+    const slug = path.replace("/packers-movers-", "");
+    return stateFromSlug(slug);
+  }
+
+  return null;
+};
+
 function App() {
-  const [active, setActive] = useState('home');
-  const [selectedArea, setSelectedArea] = useState(null);
+ const [active, setActive] = useState(getInitialRoute());
+ const [selectedArea, setSelectedArea] = useState(getInitialArea());
   const [showQuote, setShowQuote] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
 
+  useEffect(() => {
+  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+
+  let title = "Packers and Movers in Pune | Achiever Logistics";
+  let description =
+    "Achiever Logistics provides professional packers and movers, household shifting, office relocation, car transport and logistics services in Pune and across India.";
+
+  if (path === "/services") {
+    title = "Logistics & Transport Services in India | Achiever Logistics";
+    description =
+      "Explore packing, moving, household shifting, office relocation, car transport, goods transport and logistics services from Achiever Logistics.";
+  }
+
+  if (path === "/car-transport") {
+    title = "Car Transport Service All Over India | Achiever Logistics";
+    description =
+      "Professional car transportation services for hatchbacks, sedans, SUVs and premium cars across India. Get a car transport quote from Achiever Logistics.";
+  }
+
+  if (path === "/why-choose-us") {
+    title = "Why Choose Achiever Logistics | Packers & Movers India";
+    description =
+      "Learn why customers choose Achiever Logistics for packing, moving, transportation and logistics services across Pune and India.";
+  }
+
+  if (path === "/industries") {
+    title = "Industries We Serve | Logistics & Transport Services India";
+    description =
+      "Achiever Logistics provides transportation and logistics solutions for construction, textile, FMCG, automobile, corporate and industrial businesses.";
+  }
+
+  if (path === "/about-us") {
+    title = "About Achiever Logistics | Fleet Owners & Transport Contractors";
+    description =
+      "Learn about Achiever Logistics Cargo Private Limited, fleet owners and transport contractors providing logistics and transportation services across India.";
+  }
+
+  if (path === "/contact") {
+    title = "Contact Achiever Logistics | Transport & Logistics India";
+    description =
+      "Contact Achiever Logistics for packers and movers, car transport, goods transportation, relocation and logistics services.";
+  }
+
+  if (path === "/our-network") {
+    title = "Our Network | Packers & Movers Across India | Achiever Logistics";
+    description =
+      "Explore Achiever Logistics service locations across Pune, Maharashtra and major cities across India.";
+  }
+
+  if (path.startsWith("/packers-movers-")) {
+    const slug = path.replace("/packers-movers-", "");
+
+    const area = slug
+      .split("-")
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+    title = `Packers and Movers in ${area} | Achiever Logistics`;
+
+    description =
+      `Looking for packers and movers in ${area}? Achiever Logistics provides packing, moving, relocation, car transportation and logistics support in ${area}.`;
+  }
+
+  document.title = title;
+
+  let metaDescription = document.querySelector(
+    'meta[name="description"]'
+  );
+
+  if (!metaDescription) {
+    metaDescription = document.createElement("meta");
+    metaDescription.setAttribute("name", "description");
+    document.head.appendChild(metaDescription);
+  }
+
+  metaDescription.setAttribute("content", description);
+
+  let canonical = document.querySelector(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.setAttribute("rel", "canonical");
+    document.head.appendChild(canonical);
+  }
+
+  canonical.setAttribute(
+    "href",
+    `https://www.achieverlogistics.in${path === "/" ? "/" : path}`
+  );
+}, []);
   // Which branch's full detail page is open (null = none open)
   const [branchView, setBranchView] = useState(null);
 
@@ -2986,6 +3115,5 @@ const branches = [
     </div>
   );
 }
-
 
 export default App;

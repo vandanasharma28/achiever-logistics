@@ -5332,3 +5332,32 @@ h1:has(+ p),
 h2:has(+ p) {
   color: #ffffff !important;
 }
+/* Contact Heading Red */
+h1 {
+  color: #991b1b !important;
+}
+/* CONTACT HEADING RED FIX */
+.contact-head h1 {
+  color: #991b1b !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/* ABOUT HEADING RED FIX */
+.about-head h1,
+.about-section h1 {
+  color: #991b1b !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/* INDUSTRIES HEADING RED FIX */
+.industries-head h1,
+.industry-head h1,
+.industries-section h1,
+.industry-section h1 {
+  color: #991b1b !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
