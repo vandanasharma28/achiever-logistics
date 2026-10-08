@@ -5325,39 +5325,86 @@ body {
   }
 }
 /* =========================================
-   ALL STATE PAGE - MOVING FROM HEADING
+   FINAL FIX - RED BG = WHITE, WHITE BG = RED
    ========================================= */
 
-h1:has(+ p),
-h2:has(+ p) {
+/* 1. SAB WHITE BACKGROUND WALO KO RED KARO */
+.hero-card,
+.highlight-strip,
+.network-ribbon,
+section[style*="background:#ffffff"],
+section[style*="background: #ffffff"],
+section[style*="background:#f9fafb"],
+section[style*="background:#f8fafc"],
+.why-box,
+.branch-explore-section,
+.core-section,
+.testimonial-section,
+.counters-section {
+  background: #ffffff !important;
+}
+
+.hero-card *,
+.highlight-strip *,
+.network-ribbon *,
+section[style*="background:#ffffff"] *,
+section[style*="background: #ffffff"] *,
+section[style*="background:#f9fafb"] *,
+section[style*="background:#f8fafc"] *,
+.why-box *,
+.branch-explore-section * {
+  color: #991b1b !important;
+}
+
+/* Heading zyada dark red */
+h1, h2, h3 {
+  color: #991b1b !important;
+}
+
+/* 2. SAB RED BACKGROUND WALO KO WHITE KARO */
+div[style*="#b91c1c"],
+div[style*="#991b1b"],
+div[style*="b91c1c"],
+.red-box,
+.cta-banner,
+.badge-pill[style*="b91c1c"] {
+  background: #991b1b !important;
   color: #ffffff !important;
 }
-/* Contact Heading Red */
-h1 {
-  color: #991b1b !important;
+
+div[style*="#b91c1c"] *,
+div[style*="#991b1b"] *,
+div[style*="b91c1c"] *,
+.red-box *,
+.cta-banner *,
+.badge-pill[style*="b91c1c"] * {
+  color: #ffffff !important;
 }
-/* CONTACT HEADING RED FIX */
-.contact-head h1 {
-  color: #991b1b !important;
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+
+/* Light red text inside red box (fecaca wala) */
+div[style*="b91c1c"] span[style*="fecaca"],
+.red-box .next,
+.cta-banner p {
+  color: #fecaca !important;
 }
-/* ABOUT HEADING RED FIX */
-.about-head h1,
-.about-section h1 {
+
+/* 3. LOGO - ACHIEVER LOGISTICS */
+header span, nav span, header h1, header h1 span {
   color: #991b1b !important;
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+  background: transparent !important;
 }
-/* INDUSTRIES HEADING RED FIX */
-.industries-head h1,
-.industry-head h1,
-.industries-section h1,
-.industry-section h1 {
+
+/* 4. BLUE HATAO */
+.accent, .badge-pill, .bg-blue-600, .bg-blue-700 {
+  background: transparent !important;
+}
+.hero-card h1 .accent {
   color: #991b1b !important;
-  display: block !important;
+  background: transparent !important;
+}
+
+/* 5. HEADINGS VISIBLE */
+section, div, h1, h2, p, span {
   opacity: 1 !important;
   visibility: visible !important;
 }

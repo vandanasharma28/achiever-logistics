@@ -398,7 +398,7 @@ const branches = [
         <div className="logo-area">
           <img src="/logo.jpg" alt="AL Logo" style={{ height: '45px', width: 'auto' }} />
           <div>
-            <h2>ACHIEVER</h2>
+            <h2>ACHIEVER LOGISTICS</h2>
             <p>{COMPANY_TAGLINE.toUpperCase()}</p>
           </div>
         </div>
@@ -1206,6 +1206,7 @@ const branches = [
         </button>
 
       </div>
+
 
     </section>
 
